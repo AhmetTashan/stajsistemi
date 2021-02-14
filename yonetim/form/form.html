@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JQuery ve PHP ile güvenlik kodu uygulaması</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
+</head>
+
+<body>
+<h3>JQuery ve PHP ile güvenlik kodu uygulaması <a href="http://www.arizali.net/kutsal-kaynak/jquery-ve-php-ile-guvenlik-kodu-uygulamasi.html" title="Jquery &amp; PHP" target="_parent">&lt; Dersine geri dön!</a></h3>
+<script type="text/javascript">   
+$(document).ready(function() {
+SoruOlustur();
+});
+function SoruOlustur()
+{
+$.get("olustur.php",{d: 1},function(xml){
+	var sec = xml;
+	$('#guvenliksorusu').text(sec);
+});
+}
+/*
+Ya da
+$(document).ready(function() {
+$.get("olustur.php",{d: 1},function(xml){
+	var sec = xml;
+	$('#guvenliksorusu').text(sec);
+});
+});
+*/
+</script>
+<form action="islem.php" method="post">
+<span id="guvenliksorusu"></span> = <input type="texbox" name="kontrol" style="width:60px;" value="" /> <input type="submit" name="islem" value="Gönder" />
+</form>
+</body>
+</html>

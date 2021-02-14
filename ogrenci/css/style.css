@@ -1,0 +1,347 @@
+/* @erbilen */
+body {
+	margin: auto;
+	font: 12px Arial;
+	background-image: url(../images/bg.png);
+	background-repeat: repeat;
+}
+
+.btnd {
+  display: inline-block;
+  *display: inline;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  *margin-left: .3em;
+  font-size: 13px;
+  line-height: 18px;
+  *line-height: 20px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  *background-color: #e6e6e6;
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  *border: 0;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.btnd.square{
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+	}
+.btnw:hover,
+.btnd:active,
+.btnd.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+
+.btn:active,
+.btn.active {
+  background-color: #cccccc \9;
+}
+
+.btnd:first-child {
+  *margin-left: 0;
+}
+
+.btnd:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+      -ms-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
+}
+table, tr, td, thead, tbody, tfoot, ul, ol, dl, dd, dt, li, h1, h2, h3, h4, h5, h6, p, img, input, form, button, textarea, select {padding: 0; margin: 0; list-style: none; border: 0}
+a {text-decoration: none}
+*:focus {outline: 0}
+.clear {clear: both}
+.fl {float: left}
+.fr {float: right}
+.margin {margin-bottom: 10px}
+h3.title {font: normal 20px Trebuchet MS; color: #333; padding: 5px 0; border-bottom: 1px solid #ddd; margin-bottom: 10px}
+
+/* Form Elements */
+input {padding: 6px; font: bold 14px Arial; border: 1px solid #ccc; border-top-color: #eee; border-left-color: #eee; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #fff; resize: none; height: 22px}
+textarea {padding: 0 6px; font: bold 14px Arial; border: 1px solid #ccc; border-top-color: #eee; border-left-color: #eee; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #fff; resize: none; overflow: auto}
+textarea {padding: 6px}
+textarea:focus, input:focus {background: #f6f6f6}
+select {padding: 6px; font-size: 14px; font-weight: bold; border: 1px solid #ccc; border-top-color: #eee; border-left-color: #eee; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background: #fff}
+button {background: #f1f1f1; color: #333; font-weight: bold; font-size: 14px; padding: 8px 10px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border: 1px solid #ddd; border-top-color: #bbb; border-left-color: #bbb; cursor: pointer; height: 36px}
+button:active {border-color: #bbb}
+
+/* Error */
+.msg {padding: 7px; color: #fff; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; margin-bottom: 10px}
+.msg.error {background: #b42323}
+.msg.success {background: #83b423}
+.msg.information {background: #236eb4}
+.msg span.x {float: right; padding: 0 5px; position: relative; top: -1px; font-weight: bold; cursor: pointer}
+
+/* Content */
+#content {width: 980px; margin: 0 auto}
+
+/* Navbar */
+#navbar {border-bottom: 1px solid #f1f1f1}
+.navbar {float: right; overflow: auto; background: #f1f1f1; border-radius: 0 0 3px 3px; -webkit-border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px; margin-top: 10px}
+.navbar ul {float: right}
+.navbar ul li {float: left}
+.navbar ul li a {display: block; padding: 10px 15px; color: #333; font-weight: bold; border-right: 1px solid #ddd; border-left: 1px solid #fff}
+.navbar ul li a:hover {color: #aaa}
+.navbar ul li.aktif a {}
+
+/* Header */
+#header {padding: 20px 0; height: 70px; position: relative}
+
+/* Avatar Show */
+#avatarShow {width: 1029px; margin-left: -20px; margin-bottom: 15px; position: relative}
+#avatarShow ul li {float: left; width: 49px; height: 49px}
+#avatarShow ul li a img {width: 49px; height: 49px}
+.parlakSol {position: absolute; top: 0; left: -10px; width: 60px; height: 49px; z-index: 2; background: url("../images/parlakSol.png")}
+.parlakSag {position: absolute; top: 0; right: -5px; width: 60px; height: 49px; z-index: 2; background: url("../images/parlakSag.png")}
+
+/* Left */
+#left {float: left; width: 680px}
+
+	/* Link List */
+	div.linkList ul li {padding: 10px; border: 1px solid #ccc; border-bottom-color: #eee; border-right-color: #eee; border-radius: 3px; margin-bottom: 10px; position: relative}
+	div.linkList ul li span.favori {float: right}
+	div.linkList ul li span.ico {float: left; margin-right: 5px}
+	div.linkList ul li span.ico img {width: 16px; height: 16px}
+	div.linkList ul li span.link {display: block; margin-bottom: 5px}
+	div.linkList ul li span.link a {color: #333; font-size: 14px; font-weight: bold; display: block}
+	div.linkList ul li span.link a:hover {text-decoration: underline}
+	div.linkList ul li span.user a {color: #aaa}
+	div.linkList ul li span.time {font-style: oblique; color: #965f5f}
+	div.linkList ul li span.addLink {float: right}
+	span.desc {position: absolute; top: 0; right: -230px; width: 200px; background: #000; color: #fff; padding: 10px!important; border-radius: 3px; z-index: 3}
+	span.desc span.lok {width: 8px; height: 16px; background: url("../images/ok2.png") no-repeat; overflow: hidden; position: absolute; top: 10px; left: -8px}
+	
+		/* Load More */
+		div.loadMore {border: 1px solid #ddd; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px}
+		div.loadMore a {display: block; padding: 10px; font-size: 14px; font-weight: bold; color: #aaa; text-align: center}
+		div.loadMore a:hover {color: #333}
+	
+	/* Form */
+	.form {
+	padding: 10px 15px;
+	margin-top: -10px;
+	background-color: rgba(255,255,255,0.6);
+	background-repeat: repeat;
+}
+	.form ul li {margin-bottom: 10px}
+	.form ul li span {display: block; padding: px 0}
+	.formSol {float: left; width: 416px}
+	.linkForm {padding: 10px 10px 0 10px; background: #f8f8f0; border: 1px solid #ddd; margin-bottom: 10px}
+	
+		/* ok */
+		.not {float: right; width: 180px; border: 1px solid #ccc; border-bottom-color: #eee; border-right-color: #eee; padding: 10px; line-height: 25px; position: relative}
+		.not span.ok {width: 13px; height: 26px; background: url("../images/ok.png"); display: block; position: absolute; top: 10px; left: -13px}
+		.not span {display: block}
+		
+	/* Üye Profil Menü */
+	ul.profil-link {border: 1px solid #d6d6d6; padding: 5px 10px; border-top-color: #eee; border-left-color: #eee}
+	ul.profil-link li {position: relative}
+	.uyeContent ul li a img {float: left; width: 16px; height: 16px; margin-right: 10px}
+	ul.profil-link li a {display: block; padding: 5px 0; color: #333}
+	ul.profil-link li a:hover {color: #aaa}
+	
+	/* Linkler */
+	.linkler {float: left; width: 450px; min-height: 300px}
+	.linkBg {background: url("../images/bg2.png") no-repeat top; border-top: 1px solid #ddd}
+	.linkler h4 {display: block; padding: 8px; background: #fff; border: 1px solid #BBB; border-bottom-color: #DDD; border-right-color: #DDD; color: #4256B3; font-weight: normal; margin-bottom: 5px; font-weight: bold; font-size: 15px}
+	.linkler h4 ul {float: right}
+	.linkler h4 ul li {float: left; margin-left: 7px; border: 1px solid #ddd; background: #f1f1f1}
+	.linkler h4 ul li a {display: block; font-size: 12px; padding: 5px 10px; color: #333; font-weight: normal}
+	.linkler h4 ul li.aktif {border-bottom-color: #fff; background: #fff}
+	.linkler h4 ul li.aktif a {color: #84B342}
+	.linkBg ul {padding: 0 5px 10px 5px}
+	.linkBg ul li {margin-bottom: 0; position: relative; width: 435px!important}
+	.linkBg ul li a {display: block; padding: 10px 5px; color: #333; border-bottom: 1px solid #eee}
+	.linkBg ul li a:hover {color: #aaa}
+	
+/* Right */
+#right {float: right; width: 280px}
+
+	/* Random Tags */
+	#randomTags div a {display: block; float: left; padding: 3px 5px; background: #f1f1f1; margin-right: 5px; margin-bottom: 5px; color: #0e6ad1}
+	#randomTags div a:hover {background: #fff; color: #333}
+	
+	/* Login */
+	#login ul li span {display: block; padding: 3px 0}
+	
+/* Footer */
+#footer {
+	border-top: 1px solid #ddd;
+	border: 1px solid #bbb;
+	border-top-color: #ddd;
+	border-left-color: #ddd;
+	border-radius: 3px;
+	-moz-border-raidus: 3px;
+	-webkit-border-radius: 3px;
+	margin-bottom: 20px
+}
+
+	/* Footer Logo */
+	.fLogo a img {width: 250px}
+	
+	/* Copyright*/ 
+	.copyright {float: right; padding: 10px; text-align: right; color: #656565}
+	.copyright a {color: #aaa}
+	.copyright a:hover {text-decoration: underline}
+	
+/* Link Tab */
+.linkTab {margin-bottom: 10px; overflow: auto}
+.linkTab ul li {float: left; width: 150px; margin-right: 5px; border: 1px solid #ccc; border-top-color: #eee; border-left-color: #eee}
+.linkTab ul li a {display: block; padding: 5px 0; text-align: center; color: #333}
+.linkTab ul li.aktif {background: #f6f6f6}
+.linkTab ul li.aktif a {color: #0a5e9f}
+.linkBtn {float: right; margin-left: 5px}
+.linkBtn a {background: #fff; display: block; padding: 3px 6px; border: 1px solid #ccc; border-bottom-color: #eee; border-right-color: #eee; color: #333}
+.userLinkList {border-top: 1px solid #ddd}
+.userLinkList ul li {overflow: auto; padding: 10px; border-bottom: 1px solid #ddd}
+.userLinkList ul li:hover {background: #f6f6f6}
+.linkTitle {position: relative; top: 5px}
+
+#mainLogin {
+	overflow: auto;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 30px;
+	padding-left: 10px;
+	
+}
+#mainLogin h1 {font: 30px Trebuchet MS; margin-bottom: 10px}
+#mainLogin p {font: 16px/24px Arial; color: #aaa}
+.homeMenu {position: absolute; top: 30px; right: 125px}
+.homeMenu a {display: block; float: left; margin-left: 10px; background: #fff; border: 1px solid #ddd; padding: 8px 15px; font-weight: bold; font-size: 14px; color: #333; border-radius: 3px; border-top-color: #eee; border-left-color: #eee}
+.homeMenu2 {position: absolute; top: 30px; left: 125px}
+.homeMenu2 a {display: block; float: left; margin-left: 10px; background: #fff; border: 1px solid #ddd; padding: 8px 15px; font-weight: bold; font-size: 14px; color: #333; border-radius: 3px; border-top-color: #eee; border-left-color: #eee}
+
+#stat div {padding-bottom: 10px}
+#stat div span {font: bold 17px Trebuchet MS; vertical-align: middle; padding-right: 5px}
+
+/* Paylaş */
+.sharrre .box{
+background:#6f838c;
+background:-webkit-gradient(linear,left top,left bottom,color-stop(#6f838c,0),color-stop(#4d5e66,1));
+background:-webkit-linear-gradient(top, #6f838c 0%, #4d5e66 100%);
+background:-moz-linear-gradient(top, #6f838c 0%, #4d5e66 100%);
+background:-o-linear-gradient(top, #6f838c 0%, #4d5e66 100%);
+background:linear-gradient(top, #6f838c 0%, #4d5e66 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f838c', endColorstr='#4d5e66',GradientType=0 );
+-webkit-box-shadow:0 1px 1px #d3d3d3;
+-moz-box-shadow:0 1px 1px #d3d3d3;
+box-shadow:0 1px 1px #d3d3d3;
+height:22px;
+display:inline-block;
+position:relative;
+padding:0px 55px 0 8px;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+font-size:12px;
+float:left;
+clear:both;
+overflow:hidden;
+-webkit-transition:all 0.3s linear;
+-moz-transition:all 0.3s linear;
+-o-transition:all 0.3s linear;
+transition:all 0.3s linear;
+}
+.sharrre .left{
+line-height:22px;
+display:block;
+white-space:nowrap;
+text-shadow:0px 1px 1px rgba(255,255,255,0.3);
+color:#ffffff;
+-webkit-transition:all 0.2s linear;
+-moz-transition:all 0.2s linear;
+-o-transition:all 0.2s linear;
+transition:all 0.2s linear;
+}
+.sharrre .middle{
+position:absolute;
+height:22px;
+top:0px;
+right:30px;
+width:0px;
+background:#63707e;
+text-shadow:0px -1px 1px #363f49;
+color:#fff;
+white-space:nowrap;
+text-align:left;
+overflow:hidden;
+-webkit-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+-moz-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+-webkit-transition:width 0.3s linear;
+-moz-transition:width 0.3s linear;
+-o-transition:width 0.3s linear;
+transition:width 0.3s linear;
+}
+.sharrre .middle a{
+color:#fff;
+font-weight:bold;
+padding:0 9px 0 9px;
+text-align:center;
+float:left;
+line-height:22px;
+-webkit-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+-moz-box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+box-shadow:-1px 0px 1px rgba(255,255,255,0.4), 1px 1px 2px rgba(0,0,0,0.2) inset;
+}
+.sharrre .right{
+position:absolute;
+right:0px;
+top:0px;
+height:100%;
+width:45px;
+text-align:center;
+line-height:22px;
+color:#4b5d61;
+background:#f1faf9;
+background:-webkit-gradient(linear,left top,left bottom,color-stop(#f1faf9,0),color-stop(#bacfd2,1));
+background:-webkit-linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+background:-moz-linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+background:-o-linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+background:linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1faf9', endColorstr='#bacfd2',GradientType=0 );
+}
+.sharrre .box:hover{
+padding-right:130px;
+}
+.sharrre .middle a:hover{
+text-decoration:none;
+}
+.sharrre .box:hover .middle{
+width:90px;
+}
